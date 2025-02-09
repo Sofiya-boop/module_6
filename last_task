@@ -1,0 +1,44 @@
+class Figure():
+    sides_count = 0
+    __sides = []
+    __color = []
+    filled = bool()
+
+    def get_color(self):
+        return self.__color
+
+    def __is_valid_color(self, r, g, b):
+        return (isinstance(r, int) and 0 <= r <= 255 and
+                isinstance(g, int) and 0 <= g <= 255 and
+                isinstance(b, int) and 0 <= b <= 255)
+
+    def set_color(self, r, g, b):
+       if self.__is_valid_color(r, g, b):
+           self.__color = (r, g, b)
+
+    def __is_valid_sides(self):
+        if isinstance(self.__sides, int):
+            return True
+        else:
+            return False
+
+    def get_sides(self):
+        return self.__sides
+
+    def __len__(self):
+        return sum(self.__sides)
+
+    def set_sides(self, *new_sides):
+        self.new_sides = new_sides
+        #new_sides = 0
+        if new_sides != self.sides_count:
+            return self.sides_count
+        else:
+            return new_sides
+
+class Circle:
+    sides_count = 1
+    # __radius
+    def get_square(self):
+        return 
+
