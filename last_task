@@ -1,8 +1,13 @@
+import math
+
 class Figure():
-    sides_count = 0
-    __sides = []
-    __color = []
-    filled = bool()
+    def __init__(self, filled = bool(), sides_count = 0, __sides = [], __color = []):
+        self.filled = filled
+        self.sides_count = sides_count
+        self.__sides = __sides
+        self.__color = __color
+
+
 
     def get_color(self):
         return self.__color
@@ -36,9 +41,22 @@ class Figure():
         else:
             return new_sides
 
-class Circle:
+class Circle(Figure):
     sides_count = 1
-    # __radius
-    def get_square(self):
-        return 
+    __radius = 2 * math.pi * #__sides
 
+    def get_square(self):
+        return math.pi * pow(self.__radius, 2)
+
+class Triangle(Figure):
+    sides_count = 3
+    p = sum(Figure.get.__sides) / 2
+
+    def get_square(self):
+        return math.sqrt(p*(p - Figure.get.__sides)*(p - Figure.get.__sides)*(p - Figure.get.__sides))
+
+class Cube(Figure):
+    sides_count = 12
+    s = []
+    s.append.Figure.get.__sides
+    def
